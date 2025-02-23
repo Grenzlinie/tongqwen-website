@@ -81,7 +81,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <footer className="bg-white border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-slate-500 text-sm">
-            © {new Date().getFullYear()} Your Name. All rights reserved.
+            © {new Date().getFullYear()} Tongqi Wen. All rights reserved.
           </div>
         </div>
       </footer>
