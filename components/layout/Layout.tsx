@@ -21,7 +21,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex justify-between items-center h-16">
             {/* Logo/Name */}
             <Link href="/" className="text-xl font-semibold text-slate-900">
-              Your Name
+            Exploring Exciting AI for Science Topic
             </Link>
 
             {/* Desktop Navigation */}
