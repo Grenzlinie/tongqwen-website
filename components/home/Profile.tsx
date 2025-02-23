@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Mail, Github, Twitter, Linkedin, GraduationCap } from 'lucide-react';
+import { Mail, Github, Linkedin, GraduationCap } from 'lucide-react';
 
 const Profile = () => {
   return (
