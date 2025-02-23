@@ -31,7 +31,7 @@ const PaperList = () => {
     }
   ];
 
-  const [selectedYear, setSelectedYear] = useState(null);
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
 
   const years = [...new Set(papers.map(group => group.year))];
 
