@@ -20,6 +20,7 @@ const SelectedPapers = () => {
       area: ["AI4S", "Materials Laws"],
       date: "November 25, 2024",
       abstract: "This paper introduces a multi-agent framework based on large language models (LLMs) specifically designed for symbolic regression in materials science. The framework was applied to derive an interpretable formula for the glass-forming ability of metallic glasses, achieving a correlation coefficient of up to 0.948 with low formula complexity.",
+      question: "🚀 Does AI possess the intelligence to autonomously discover materials laws?",
       image: "/hubo1.png", // 替换为实际的图片路径
     },
     {
@@ -30,7 +31,8 @@ const SelectedPapers = () => {
       area: ["AI4S", "Materials Laws"],
       date: "September 19, 2024",
       abstract: "This paper introduces a prompt-engineered large language model (LLM) and deep learning workflow for materials classification. By integrating LLMs with prompt engineering and deep learning techniques, the proposed approach effectively extracts and utilizes the vast materials knowledge embedded within LLMs. Using a dataset of metallic glasses as a case study, the method significantly outperforms conventional classification models, achieving up to a 463% improvement in prediction accuracy. These results highlight the potential of LLM-generated textual knowledge in addressing materials classification challenges, particularly in scenarios with limited datasets, thereby advancing materials discovery and design.",
-      image: "/siyu1.png", // 替换为实际的图片路径
+      question: "🧀 Can the materials knowledge stored in LLMs help us classify materials?",
+      image: "/siyu1.jpg", // 替换为实际的图片路径
     }
     // 添加更多选定的论文
   ];
@@ -77,11 +79,18 @@ const SelectedPapers = () => {
                     </div>
                   )}
                 </div>
+                {paper.question && (
+                  <p className="text-[#667eea] mt-2 text-base font-bold">
+                    <span className="text-[#667eea]">{paper.question}</span>
+                  </p>
+                )}
                 <p className="text-slate-600 mt-2 text-sm">{paper.abstract}</p>
                 {paper.image && (
                   <Image
                     src={paper.image}
                     alt={`Illustration for ${paper.title}`}
+                    width={500} // Set the width
+                    height={300} // Set the heigh
                     className="mt-4 w-3/5 ml-0 rounded-lg"
                   />
                 )}
