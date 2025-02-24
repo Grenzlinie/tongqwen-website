@@ -9,7 +9,7 @@ export default function Home() {
       <Profile />
       <Introduction />
       <SelectedPapers />
-      <JoinUs />  {/* Join Us component below the Selected Papers */}
+      <JoinUs />
     </div>
   );
 }
