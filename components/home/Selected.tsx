@@ -7,6 +7,7 @@ const SelectedPapers = () => {
   const areaColors: { [key: string]: string } = {
     'AI4S': 'bg-red-50 text-red-700 ring-red-600/10',
     'Materials Laws': 'bg-yellow-50 text-yellow-800 ring-yellow-600/20',
+    'Materials Properties': 'bg-green-50 text-green-800 ring-green-600/20',
     'Other Area': 'bg-blue-50 text-blue-700 ring-blue-700/10',
     // 添加更多领域和对应的颜色类
   };
@@ -24,15 +25,15 @@ const SelectedPapers = () => {
       image: "/hubo1.png", // 替换为实际的图片路径
     },
     {
-      title: "A prompt-engineered large language model, deep learning workflow for materials classification",
-      authors: "Siyu Liu, Tongqi Wen, A.S.L. Subrahmanyam Pattamatta, David J. Srolovitz",
-      conference: "Materials Today",
+      title: "Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design",
+      authors: "Siyu Liu, Tongqi Wen, Beilin Ye, Zhuoyuan Li, David J. Srolovitz",
+      conference: "arXiv",
       link: "https://www.sciencedirect.com/science/article/abs/pii/S1369702124002001",
-      area: ["AI4S", "Materials Laws"],
-      date: "September 19, 2024",
-      abstract: "This paper introduces a prompt-engineered large language model (LLM) and deep learning workflow for materials classification. By integrating LLMs with prompt engineering and deep learning techniques, the proposed approach effectively extracts and utilizes the vast materials knowledge embedded within LLMs. Using a dataset of metallic glasses as a case study, the method significantly outperforms conventional classification models, achieving up to a 463% improvement in prediction accuracy. These results highlight the potential of LLM-generated textual knowledge in addressing materials classification challenges, particularly in scenarios with limited datasets, thereby advancing materials discovery and design.",
-      question: "🧀 Can the materials knowledge stored in LLMs help us classify materials?",
-      image: "/siyu1.jpg", // 替换为实际的图片路径
+      area: ["AI4S", "Materials Properties"],
+      date: "November 19, 2024",
+      abstract: "Efficient and accurate prediction of material properties is critical for advancing materials design and applications. The rapid-evolution of large language models (LLMs) presents a new opportunity for material property predictions, complementing experimental measurements and multi-scale computational methods. We focus on predicting the elastic constant tensor, as a case study, and develop domain-specific LLMs for predicting elastic constants and for materials discovery. The proposed ElaTBot LLM enables simultaneous prediction of elastic constant tensors, bulk modulus at finite temperatures, and the generation of new materials with targeted properties. Moreover, the capabilities of ElaTBot are further enhanced by integrating with general LLMs (GPT-4o) and Retrieval-Augmented Generation (RAG) for prediction. A specialized variant, ElaTBot-DFT, designed for 0 K elastic constant tensor prediction, reduces the prediction errors by 33.1% compared with domain-specific, material science LLMs (Darwin) trained on the same dataset. This natural language-based approach lowers the barriers to computational materials science and highlights the broader potential of LLMs for material property predictions and inverse design.",
+      question: "🧀 Can the materials knowledge stored in LLMs help us predict material properties?",
+      image: "/siyu1.png", // 替换为实际的图片路径
     }
     // 添加更多选定的论文
   ];
