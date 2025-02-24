@@ -21,7 +21,7 @@ const Profile = () => {
         <h1 className="text-3xl font-bold text-slate-900 mb-2">
           Tongqi Wen
         </h1>
-        <p className="text-lg text-slate-600 mb-4">
+        <p className="text-base text-slate-600 mb-4">
           Research Assistant Professor
           <br />
           Ph.D. in Materials Science
@@ -32,16 +32,28 @@ const Profile = () => {
         </p>
         
         {/* Research Interests */}
-        <div className="mb-4">
+        <div className="mb-4 text-base">
           <h2 className="text-xl font-semibold text-slate-800 mb-2">Research Interests</h2>
-          <p className="text-slate-600">
-          AI for science, Machine learning potentials,
-          </p>
-          <p className="text-slate-600">
-          Atomistic simulations of defect properties, High-entropy materials, Liquid and glass.
-          </p>
+          <div className="space-x-2">
+            <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-slate-800 bg-red-50 rounded-full ring-1 ring-red-500/20 mr-2">
+              AI for Science
+            </span>
+            <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-slate-800 bg-yellow-50 rounded-full ring-1 ring-yellow-500/20 mr-2">
+              Machine Learning Potentials
+            </span>
+            <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-slate-800 bg-blue-50 rounded-full ring-1 ring-blue-500/20 mr-2">
+              Atomistic Simulations
+            </span>
+            <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-slate-800 bg-green-50 rounded-full ring-1 ring-green-500/20 mr-2">
+              High-entropy Materials
+            </span>
+          </div>
+          <div className="space-x-2 mt-2">
+            <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-slate-800 bg-purple-50 rounded-full ring-1 ring-purple-500/20">
+              Liquid and Glass
+            </span>
+          </div>
         </div>
-
         {/* Contact Info */}
         <div className="flex flex-wrap gap-4">
           <a 

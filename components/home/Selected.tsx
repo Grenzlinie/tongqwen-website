@@ -66,12 +66,12 @@ const SelectedPapers = () => {
                     </div>
                   )}
                 </div>
-                <p className="text-slate-600 mt-2">{paper.abstract}</p>
+                <p className="text-slate-600 mt-2 text-sm">{paper.abstract}</p>
                 {paper.image && (
                   <img
                     src={paper.image}
                     alt={`Illustration for ${paper.title}`}
-                    className="mt-4 w-4/5 ml-0 rounded-lg"
+                    className="mt-4 w-3/5 ml-0 rounded-lg"
                   />
                 )}
               </div>
