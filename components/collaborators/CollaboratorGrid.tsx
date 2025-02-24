@@ -55,63 +55,36 @@ const CollaboratorGrid = () => {
       research: "Large language model, Machine learning, Deep learning for materials"
     },
     {
-      name: "Sun Yang",
+      name: "Yang Sun",
       title: "Researcher",
       institution: "Columbia University",
       image: "/sunyang.png",
       website: "https://scholar.google.com/citations?user=91yBLrMAAAAJ&hl=zh-CN",
       research: ""
+    },
+    {
+      name: "Weinan E",
+      title: "Researcher",
+      institution: "Peking University",
+      image: "/default.png",
+      website: "https://scholar.google.com/citations?user=i2mOt14AAAAJ&hl=zh-CN",
+      research: "Applied mathematics"
+    },
+    {
+      name: "Han Wang",
+      title: "Researcher",
+      institution: "Institute of Applied Physics and Computational Mathematics",
+      image: "/han-wang.png",
+      website: "https://scholar.google.com/citations?user=BZsn3tcAAAAJ&hl=zh-CN",
+      research: "Molecular dynamics, Machine learning, Rare events, Multiscale simulation"
     }
     // Add more collaborators here
   ];
 
-  // Separate collaborators based on title
-  const groupMembers = collaborators.filter(c => c.title === "Group member");
-  const researchers = collaborators.filter(c => c.title === "Researcher");
-
   return (
     <div>
-      {/* Group members section */}
-      <div className="text-xl font-semibold mb-4">Members</div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {groupMembers.map((collaborator, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6"
-          >
-            <div className="flex items-start gap-4">
-              <div className="w-20 h-20 relative rounded-full overflow-hidden flex-shrink-0">
-                <Image
-                  src={collaborator.image}
-                  alt={collaborator.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-medium text-slate-900 group">
-                  <a
-                    href={collaborator.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 hover:text-sky-500 transition-colors"
-                  >
-                    {collaborator.name}
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                </h3>
-                <p className="text-slate-600 text-sm">{collaborator.institution}</p>
-                <p className="text-slate-500 text-sm mt-2">{collaborator.research}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Researchers section */}
-      <div className="text-xl font-semibold mt-8 mb-4">Researchers</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {researchers.map((collaborator, index) => (
+        {collaborators.map((collaborator, index) => (
           <div
             key={index}
             className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6"
