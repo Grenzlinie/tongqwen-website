@@ -22,6 +22,16 @@ const SelectedPapers = () => {
       abstract: "This paper introduces a multi-agent framework based on large language models (LLMs) specifically designed for symbolic regression in materials science. The framework was applied to derive an interpretable formula for the glass-forming ability of metallic glasses, achieving a correlation coefficient of up to 0.948 with low formula complexity.",
       image: "/hubo1.png", // 替换为实际的图片路径
     },
+    {
+      title: "A prompt-engineered large language model, deep learning workflow for materials classification",
+      authors: "Siyu Liu, Tongqi Wen, A.S.L. Subrahmanyam Pattamatta, David J. Srolovitz",
+      conference: "Materials Today",
+      link: "https://www.sciencedirect.com/science/article/abs/pii/S1369702124002001",
+      area: ["AI4S", "Materials Laws"],
+      date: "September 19, 2024",
+      abstract: "This paper introduces a prompt-engineered large language model (LLM) and deep learning workflow for materials classification. By integrating LLMs with prompt engineering and deep learning techniques, the proposed approach effectively extracts and utilizes the vast materials knowledge embedded within LLMs. Using a dataset of metallic glasses as a case study, the method significantly outperforms conventional classification models, achieving up to a 463% improvement in prediction accuracy. These results highlight the potential of LLM-generated textual knowledge in addressing materials classification challenges, particularly in scenarios with limited datasets, thereby advancing materials discovery and design.",
+      image: "/siyu1.png", // 替换为实际的图片路径
+    }
     // 添加更多选定的论文
   ];
 
