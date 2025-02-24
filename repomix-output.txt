@@ -1,0 +1,637 @@
+This file is a merged representation of a subset of the codebase, containing specifically included files, combined into a single document by Repomix.
+
+================================================================
+File Summary
+================================================================
+
+Purpose:
+--------
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+
+File Format:
+------------
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Multiple file entries, each consisting of:
+  a. A separator line (================)
+  b. The file path (File: path/to/file)
+  c. Another separator line
+  d. The full contents of the file
+  e. A blank line
+
+Usage Guidelines:
+-----------------
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+
+Notes:
+------
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Only files matching these patterns are included: **/*.tsx
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+
+Additional Info:
+----------------
+
+================================================================
+Directory Structure
+================================================================
+app/
+  collaborators/
+    page.tsx
+  papers/
+    page.tsx
+  layout.tsx
+  page.tsx
+components/
+  collaborators/
+    CollaboratorGrid.tsx
+  home/
+    News.tsx
+    Profile.tsx
+    Selected.tsx
+  layout/
+    Layout.tsx
+  papers/
+    PaperList.tsx
+
+================================================================
+Files
+================================================================
+
+================
+File: app/collaborators/page.tsx
+================
+import CollaboratorGrid from '@/components/collaborators/CollaboratorGrid';
+
+export default function CollaboratorsPage() {
+  return (
+    <div className="space-y-8">
+      <div>
+        <h1 className="text-3xl font-bold text-slate-900">Collaborators</h1>
+        <p className="mt-2 text-slate-600">
+          I have been fortunate to work with many talented researchers and professors throughout my academic journey.
+        </p>
+      </div>
+      <CollaboratorGrid />
+    </div>
+  );
+}
+
+================
+File: app/papers/page.tsx
+================
+import PaperList from '@/components/papers/PaperList';
+
+export default function PapersPage() {
+  return (
+    <div className="space-y-8">
+      <div>
+        <h1 className="text-3xl font-bold text-slate-900">Publications</h1>
+        <p className="mt-2 text-slate-600">
+          My research publications, sorted by year. You can also find my papers on
+          {' '}
+          <a 
+            href="https://scholar.google.com/citations?user=YOUR_ID"
+            className="text-sky-500 hover:text-sky-600 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Scholar
+          </a>
+          .
+        </p>
+      </div>
+      <PaperList />
+    </div>
+  );
+}
+
+================
+File: app/layout.tsx
+================
+// app/layout.tsx
+import './globals.css'
+import type { Metadata } from 'next'
+import Layout from '@/components/layout/Layout'
+
+export const metadata: Metadata = {
+  title: 'Tongqi Wen - Personal Academic Website',
+  description: 'Personal academic website showcasing research, publications and collaborations',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <Layout>{children}</Layout>
+      </body>
+    </html>
+  )
+}
+
+================
+File: app/page.tsx
+================
+import Profile from '@/components/home/Profile';
+import News from '@/components/home/News';
+import SelectedPapers from '@/components/home/Selected';
+
+export default function Home() {
+  return (
+    <div className="space-y-8">
+      <Profile />
+      <div className="grid md:grid-cols-2 gap-8">
+        <News />
+        <SelectedPapers />
+      </div>
+    </div>
+  );
+}
+
+================
+File: components/collaborators/CollaboratorGrid.tsx
+================
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+import { ExternalLink } from 'lucide-react';
+
+const CollaboratorGrid = () => {
+  const collaborators = [
+    {
+      name: "David Srolovitz",
+      title: "Professor",
+      institution: "The University of Hong Kong",
+      image: "/david-srolovitz.png",
+      website: "https://scholar.google.com/citations?hl=zh-CN&user=nC95Zy0AAAAJ&view_op=list_works&sortby=pubdate",
+      research: "Materials theory/simulations of defects, Microstructure, Deformation, and Film growth"
+    },
+    // Add more collaborators here
+  ];
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {collaborators.map((collaborator, index) => (
+        <div 
+          key={index}
+          className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6"
+        >
+          <div className="flex items-start gap-4">
+            <div className="w-20 h-20 relative rounded-full overflow-hidden flex-shrink-0">
+              <Image
+                src={collaborator.image}
+                alt={collaborator.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-medium text-slate-900 group">
+                <a 
+                  href={collaborator.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 hover:text-sky-500 transition-colors"
+                >
+                  {collaborator.name}
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <p className="text-slate-600 text-sm mt-1">
+                {collaborator.title}
+              </p>
+              <p className="text-slate-600 text-sm">
+                {collaborator.institution}
+              </p>
+              <p className="text-slate-500 text-sm mt-2">
+                {collaborator.research}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default CollaboratorGrid;
+
+================
+File: components/home/News.tsx
+================
+import React from 'react';
+
+const News = () => {
+  const newsItems = [
+    {
+      date: '2024-02',
+      content: 'Paper accepted to CVPR 2024!',
+    },
+    {
+      date: '2024-01',
+      content: 'Joining XYZ Lab as a Postdoctoral Researcher',
+    },
+    {
+      date: '2023-12',
+      content: 'Successfully defended my Ph.D. thesis',
+    },
+    // Add more news items here
+  ];
+
+  return (
+    <div className="py-8">
+      <h2 className="text-2xl font-bold text-slate-900 mb-6">Recent News</h2>
+      <div className="space-y-4">
+        {newsItems.map((item, index) => (
+          <div 
+            key={index} 
+            className="flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div className="text-sm font-medium text-sky-500 whitespace-nowrap">
+              {item.date}
+            </div>
+            <div className="text-slate-700">
+              {item.content}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default News;
+
+================
+File: components/home/Profile.tsx
+================
+import React from 'react';
+import Image from 'next/image';
+import { Mail, Github, Linkedin, GraduationCap } from 'lucide-react';
+
+const Profile = () => {
+  return (
+    <div className="flex flex-col md:flex-row items-start gap-8 py-8">
+      {/* Profile Image */}
+      <div className="w-48 h-48 relative rounded-lg overflow-hidden shadow-lg">
+        <Image
+          src="/personal-photo.png"
+          alt="Profile"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      {/* Profile Info */}
+      <div className="flex-1">
+        <h1 className="text-3xl font-bold text-slate-900 mb-2">
+          Tongqi Wen
+        </h1>
+        <p className="text-lg text-slate-600 mb-4">
+          Research Assistant Professor
+          <br />
+          Ph.D. in Materials Science
+          <br />
+          Department of Mechanical Engineering
+          <br />
+          The University of Hong Kong
+        </p>
+        
+        {/* Research Interests */}
+        <div className="mb-4">
+          <h2 className="text-xl font-semibold text-slate-800 mb-2">Research Interests</h2>
+          <p className="text-slate-600">
+          AI for science, Machine learning potentials,
+          </p>
+          <p className="text-slate-600">
+          Atomistic simulations of defect properties, High-entropy materials, Liquid and glass.
+          </p>
+        </div>
+
+        {/* Contact Info */}
+        <div className="flex flex-wrap gap-4">
+          <a 
+            href="mailto:tongqwen@hku.hk"
+            className="flex items-center gap-2 text-slate-600 hover:text-sky-500 transition-colors"
+          >
+            <Mail className="w-4 h-4" />
+            <span>Email</span>
+          </a>
+          <a 
+            href="https://github.com/kevinwenminion"
+            className="flex items-center gap-2 text-slate-600 hover:text-sky-500 transition-colors"
+          >
+            <Github className="w-4 h-4" />
+            <span>GitHub</span>
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/tongqi-wen-b99240220/"
+            className="flex items-center gap-2 text-slate-600 hover:text-sky-500 transition-colors"
+          >
+            <Linkedin className="w-4 h-4" />
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://scholar.google.com/citations?user=dxz_N2AAAAAJ&hl=zh-CN&oi=ao"
+            className="flex items-center gap-2 text-slate-600 hover:text-sky-500 transition-colors"
+          >
+            <GraduationCap className="w-4 h-4" />
+            <span>Google Scholar</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Profile;
+
+================
+File: components/home/Selected.tsx
+================
+import React from 'react';
+import { FileText } from 'lucide-react';
+
+const SelectedPapers = () => {
+  const papers = [
+    {
+      title: "Your Paper Title Here",
+      authors: "Your Name, Co-author 1, Co-author 2",
+      conference: "CVPR 2024",
+      link: "https://paper-url.com",
+      highlight: "Best Paper Award"
+    },
+    // Add more selected papers
+  ];
+
+  return (
+    <div className="py-8">
+      <h2 className="text-2xl font-bold text-slate-900 mb-6">Selected Publications</h2>
+      <div className="space-y-6">
+        {papers.map((paper, index) => (
+          <div 
+            key={index}
+            className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div className="flex items-start gap-4">
+              <FileText className="w-6 h-6 text-sky-500 flex-shrink-0 mt-1" />
+              <div>
+                <a 
+                  href={paper.link}
+                  className="text-lg font-medium text-slate-900 hover:text-sky-500 transition-colors"
+                >
+                  {paper.title}
+                </a>
+                <p className="text-slate-600 mt-1">{paper.authors}</p>
+                <div className="flex items-center gap-4 mt-2">
+                  <span className="text-sm text-slate-500">{paper.conference}</span>
+                  {paper.highlight && (
+                    <span className="text-sm font-medium text-sky-500">
+                      {paper.highlight}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default SelectedPapers;
+
+================
+File: components/layout/Layout.tsx
+================
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import { Home, FileText, Users, Menu, X } from 'lucide-react';
+
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const navItems = [
+    { href: '/', label: 'Home', icon: Home },
+    { href: '/papers', label: 'Papers', icon: FileText },
+    { href: '/collaborators', label: 'Collaborators', icon: Users },
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-50">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm border-b border-slate-200 z-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo/Name */}
+            <Link href="https://tongqwen-website.vercel.app/" className="text-xl font-semibold text-slate-900">
+            Personal Website
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex items-center space-x-1 text-slate-600 hover:text-sky-500 transition-colors"
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.label}</span>
+                </Link>
+              ))}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6 text-slate-600" />
+              ) : (
+                <Menu className="w-6 h-6 text-slate-600" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-b border-slate-200">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-slate-600 hover:bg-slate-100"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+      </nav>
+
+      {/* Main Content */}
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+        {children}
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-white border-t border-slate-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center text-slate-500 text-sm">
+            © {new Date().getFullYear()} Tongqi Wen. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default RootLayout;
+
+================
+File: components/papers/PaperList.tsx
+================
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { FileText } from 'lucide-react';
+
+const PaperList = () => {
+  const [papers, setPapers] = useState<any[]>([]);
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Fetch the papers data from the JSON file
+    const fetchPapersFromJson = async () => {
+      try {
+        const response = await fetch('/papers_info.json'); // Adjust the path if needed
+        const data = await response.json();
+
+        // Process the data to organize papers by year
+        const processedPapers = processPapersData(data);
+        setPapers(processedPapers);
+      } catch (error) {
+        console.error('Failed to load papers from JSON:', error);
+      }
+    };
+
+    fetchPapersFromJson();
+  }, []);
+
+  const processPapersData = (data: any[]) => {
+    // Organize papers by year
+    const papersByYear: any[] = [];
+
+    data.forEach((paper: any) => {
+      const { Year, Title, Author, Journal, FirstAuthor } = paper;
+      if (!Year || !Title || !Author) return;
+
+      let yearGroup = papersByYear.find((group) => group.year === Year);
+      if (!yearGroup) {
+        yearGroup = { year: Year, papers: [] };
+        papersByYear.push(yearGroup);
+      }
+
+      yearGroup.papers.push({
+        title: Title,
+        authors: Author,
+        venue: Journal,
+        firstAuthor: FirstAuthor,
+      });
+    });
+
+    return papersByYear;
+  };
+
+  const years = papers.map((group) => group.year);
+
+  return (
+    <div className="space-y-8">
+      {/* Year filter */}
+      <div className="flex flex-wrap gap-2">
+        <button
+          onClick={() => setSelectedYear(null)}
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors
+            ${!selectedYear ? 'bg-sky-500 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
+        >
+          All
+        </button>
+        {years.map((year) => (
+          <button
+            key={year}
+            onClick={() => setSelectedYear(year)}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors
+              ${selectedYear === year ? 'bg-sky-500 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
+          >
+            {year}
+          </button>
+        ))}
+      </div>
+
+      {/* Papers list */}
+      <div className="space-y-12">
+        {papers
+          .filter((group) => !selectedYear || group.year === selectedYear)
+          .map((group) => (
+            <div key={group.year}>
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">{group.year}</h2>
+              <div className="space-y-6">
+                {group.papers.map((paper: { title: string; authors: string; venue: string }, index: number) => (
+                  <div 
+                    key={index}
+                    className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-start gap-4">
+                      <FileText className="w-6 h-6 text-sky-500 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="text-lg font-medium text-slate-900">
+                          {paper.title}
+                        </h3>
+                        <p className="text-slate-600 mt-1">{paper.authors}</p>
+                        <p className="text-sm text-slate-500 mt-2">{paper.venue}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+  );
+};
+
+export default PaperList;
+
+
+
+================================================================
+End of Codebase
+================================================================

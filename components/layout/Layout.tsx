@@ -20,8 +20,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo/Name */}
-            <Link href="/" className="text-xl font-semibold text-slate-900">
-            Exploring Exciting AI for Science Topic
+            <Link
+              href="https://tongqwen-website.vercel.app/"
+              className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0ea5e9] to-[#3b82f6] transform perspective-500 rotate-x-6"
+            >
+              Personal Website
             </Link>
 
             {/* Desktop Navigation */}

@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import Layout from '@/components/layout/Layout'
 
 export const metadata: Metadata = {
-  title: 'Your Name - Personal Academic Website',
+  title: 'Tongqi Wen - Personal Academic Website',
   description: 'Personal academic website showcasing research, publications and collaborations',
 }
 

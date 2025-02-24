@@ -1,15 +1,15 @@
-import Profile from '@/components/home/Profile';
-import News from '@/components/home/News';
-import SelectedPapers from '@/components/home/Selected';
+import Introduction from '@/components/home/Introduction';
+import Profile from '@/components/home/Profile'; // Personal profile component
+import SelectedPapers from '@/components/home/Selected'; // Selected papers component
+import JoinUs from '@/components/home/JoinUs'; // Join Us component
 
 export default function Home() {
   return (
     <div className="space-y-8">
       <Profile />
-      <div className="grid md:grid-cols-2 gap-8">
-        <News />
-        <SelectedPapers />
-      </div>
+      <Introduction />
+      <SelectedPapers />
+      <JoinUs />  {/* Join Us component below the Selected Papers */}
     </div>
   );
 }

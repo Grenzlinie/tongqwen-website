@@ -7,12 +7,12 @@ import { ExternalLink } from 'lucide-react';
 const CollaboratorGrid = () => {
   const collaborators = [
     {
-      name: "Prof. Example Name",
+      name: "David Srolovitz",
       title: "Professor",
-      institution: "Stanford University",
-      image: "/api/placeholder/150/150",
-      website: "https://example.com",
-      research: "Machine Learning, Computer Vision"
+      institution: "The University of Hong Kong",
+      image: "/david-srolovitz.png",
+      website: "https://scholar.google.com/citations?hl=zh-CN&user=nC95Zy0AAAAJ&view_op=list_works&sortby=pubdate",
+      research: "Materials theory, Simulations of defects, Microstructure, Deformation, and Film growth"
     },
     // Add more collaborators here
   ];
