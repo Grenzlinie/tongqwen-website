@@ -24,7 +24,7 @@ const Profile = () => {
         <p className="text-base text-slate-600 mb-4">
           Research Assistant Professor
           <br />
-          Ph.D. in Materials Science
+          Ph.D. in Materials Science and Engineering
           <br />
           Department of Mechanical Engineering
           <br />
