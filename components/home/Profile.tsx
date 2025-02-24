@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Mail, Github, Linkedin, GraduationCap } from 'lucide-react';
+import { Mail, Github, Linkedin, GraduationCap, Microscope } from 'lucide-react';
 
 const Profile = () => {
   return (
@@ -83,6 +83,13 @@ const Profile = () => {
           >
             <GraduationCap className="w-4 h-4" />
             <span>Google Scholar</span>
+          </a>
+          <a
+            href="https://orcid.org/0000-0003-1692-2512"
+            className="flex items-center gap-2 text-slate-600 hover:text-sky-500 transition-colors"
+          >
+            <Microscope className="w-4 h-4" />
+            <span>ORCID</span>
           </a>
         </div>
       </div>
