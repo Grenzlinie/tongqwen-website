@@ -1,5 +1,6 @@
 import React from 'react';
 import { FileText } from 'lucide-react';
+import Image from 'next/image';
 
 const SelectedPapers = () => {
   // 定义领域到颜色的映射
@@ -68,7 +69,7 @@ const SelectedPapers = () => {
                 </div>
                 <p className="text-slate-600 mt-2 text-sm">{paper.abstract}</p>
                 {paper.image && (
-                  <img
+                  <Image
                     src={paper.image}
                     alt={`Illustration for ${paper.title}`}
                     className="mt-4 w-3/5 ml-0 rounded-lg"
