@@ -8,11 +8,23 @@ const SelectedPapers = () => {
     'AI4S': 'bg-red-50 text-red-700 ring-red-600/10',
     'Materials Laws': 'bg-yellow-50 text-yellow-800 ring-yellow-600/20',
     'Materials Properties': 'bg-green-50 text-green-800 ring-green-600/20',
+    "Atomic Models": "bg-purple-50 text-purple-700 ring-purple-700/10",
     'Other Area': 'bg-blue-50 text-blue-700 ring-blue-700/10',
     // 添加更多领域和对应的颜色类
   };
 
   const papers = [
+    {
+      title: "Active Learning for Conditional Inverse Design with Crystal Generation and Foundation Atomic Models",
+      authors: "Zhuoyuan Li, Siyu Liu, Beilin Ye, David J. Srolovitz, Tongqi Wen",
+      conference: "arXiv",
+      link: "https://arxiv.org/abs/2502.16984",
+      area: ["AI4S", "Materials Inverse Design", "Atomic Models"],
+      date: "February 24, 2025",
+      abstract: "Artificial intelligence (AI) is transforming materials science, enabling both theoretical advancements and accelerated materials discovery. Recent progress in crystal generation models, which design crystal structures for targeted properties, and foundation atomic models (FAMs), which capture interatomic interactions across the periodic table, has significantly improved inverse materials design. However, an efficient integration of these two approaches remains an open challenge. Here, we present an active learning framework that combines crystal generation models and foundation atomic models to enhance the accuracy and efficiency of inverse design. As a case study, we employ Con-CDVAE to generate candidate crystal structures and MACE-MP-0 FAM as one of the high-throughput screeners for bulk modulus evaluation. Through iterative active learning, we demonstrate that Con-CDVAE progressively improves its accuracy in generating crystals with target properties, highlighting the effectiveness of a property-driven fine-tuning process. Our framework is general to accommodate different crystal generation and foundation atomic models, and establishes a scalable approach for AI-driven materials discovery. By bridging generative modeling with atomic-scale simulations, this work paves the way for more accurate and efficient inverse materials design.",
+      question: "\u269B\uFE0F Can AI automatically help us discover new materials with given properties?",
+      image: "/zhuoyuan1.png", // 替换为实际的图片路径
+    },
     {
       title: "A Multi-agent Framework for Materials Laws Discovery",
       authors: "Bo Hu, Siyu Liu, Beilin Ye, Yun Hao, Tongqi Wen",
