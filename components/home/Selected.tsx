@@ -9,11 +9,23 @@ const SelectedPapers = () => {
     'Materials Laws': 'bg-yellow-50 text-yellow-800 ring-yellow-600/20',
     'Materials Properties': 'bg-green-50 text-green-800 ring-green-600/20',
     "Atomic Models": "bg-purple-50 text-purple-700 ring-purple-700/10",
+    "Materials Inverse Design": "bg-indigo-50 text-indigo-700 ring-indigo-700/10",
     'Other Area': 'bg-blue-50 text-blue-700 ring-blue-700/10',
     // 添加更多领域和对应的颜色类
   };
 
   const papers = [
+    {
+      title: "Inverse Materials Design by Large Language Model-Assisted Generative Framework",
+      authors: "Yun Hao, Che Fan, Beilin Ye, Wenhao Lu, Zhen Lu, Peilin Zhao, Zhifeng Gao, Qingyao Wu, Yanhui Liu, Tongqi Wen",
+      conference: "arXiv",
+      link: "https://arxiv.org/abs/2502.18127",
+      area: ["AI4S", "Materials Inverse Design"],
+      date: "February 25, 2025",
+      abstract: "Deep generative models hold great promise for inverse materials design, yet their efficiency and accuracy remain constrained by data scarcity and model architecture. Here, we introduce AlloyGAN, a closed-loop framework that integrates Large Language Model (LLM)-assisted text mining with Conditional Generative Adversarial Networks (CGANs) to enhance data diversity and improve inverse design. Taking alloy discovery as a case study, AlloyGAN systematically refines material candidates through iterative screening and experimental validation. For metallic glasses, the framework predicts thermodynamic properties with discrepancies of less than 8% from experiments, demonstrating its robustness. By bridging generative AI with domain knowledge and validation workflows, AlloyGAN offers a scalable approach to accelerate the discovery of materials with tailored properties, paving the way for broader applications in materials science.",
+      question: "\uD83C\uDFD7 How to efficiently mine high-quality knowledge from literature and apply it to new material discovery?",
+      image: "/haoyun1.png", // 替换为实际的图片路径
+    },
     {
       title: "Active Learning for Conditional Inverse Design with Crystal Generation and Foundation Atomic Models",
       authors: "Zhuoyuan Li, Siyu Liu, Beilin Ye, David J. Srolovitz, Tongqi Wen",

@@ -51,6 +51,11 @@ const PaperList = () => {
     // Sort the years in descending order
     papersByYear.sort((a, b) => b.year - a.year);
 
+    // Sort papers within each year group in reverse order (from last to first)
+    papersByYear.forEach(yearGroup => {
+      yearGroup.papers.reverse();
+    });
+
     return papersByYear;
   };
 

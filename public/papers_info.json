@@ -41,4 +41,38 @@
 {"Year":"2025","Journal":"Proceedings of the National Academy of Sciences","Title":"Strong, ductile, and hierarchical hetero-lamellar-structured alloys through microstructural inheritance and refinement","Author":"P Shi, Y Li, Z Li, X Jiang, J Yan, R Zhou, Y Qin, Y Lin, J Huang, B Tan, ...","First Author":"P Shi","CN\/EN":"English"},
 {"Year":"2024","Journal":"arXiv preprint arXiv:2411.16416","Title":"A Multi-agent Framework for Materials Laws Discovery","Author":"B Hu, S Liu, B Ye, Y Hao, T Wen","First Author":"B Hu","CN\/EN":"English"},
 {"Year":"2024","Journal":"arXiv preprint arXiv:2411.12280","Title":"Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design","Author":"S Liu, T Wen, B Ye, Z Li, DJ Srolovitz","First Author":"S Liu","CN\/EN":"English"},
-{"Year":"2023","Journal":"arXiv preprint arXiv:2312.17596","Title":"A\" Magnetic\" Machine Learning Interatomic Potential for Nickel","Author":"X Gong, Z Li, ASL Pattamatta, T Wen, DJ Srolovitz","First Author":"X Gong","CN\/EN":"English"}]
+{"Year":"2023","Journal":"arXiv preprint arXiv:2312.17596","Title":"A\" Magnetic\" Machine Learning Interatomic Potential for Nickel","Author":"X Gong, Z Li, ASL Pattamatta, T Wen, DJ Srolovitz","First Author":"X Gong","CN\/EN":"English"},
+    {
+      "Year": "2025",
+      "Journal": "arXiv preprint arXiv:2502.18127",
+      "Title": "Inverse Materials Design by Large Language Model-Assisted Generative Framework",
+      "Author": "Yun Hao, Che Fan, Beilin Ye, Wenhao Lu, Zhen Lu, Peilin Zhao, Zhifeng Gao, Qingyao Wu, Yanhui Liu, Tongqi Wen",
+      "First Author": "Yun Hao",
+      "CN/EN": "English"
+    },
+    {
+      "Year": "2025",
+      "Journal": "arXiv preprint arXiv:2502.16984",
+      "Title": "Active Learning for Conditional Inverse Design with Crystal Generation and Foundation Atomic Models",
+      "Author": "Zhuoyuan Li, Siyu Liu, Beilin Ye, David J. Srolovitz, Tongqi Wen",
+      "First Author": "Zhuoyuan Li",
+      "CN/EN": "English"
+    },
+    {
+      "Year": "2024",
+      "Journal": "arXiv preprint arXiv:2411.16416",
+      "Title": "A Multi-agent Framework for Materials Laws Discovery",
+      "Author": "Bo Hu, Siyu Liu, Beilin Ye, Yun Hao, Tongqi Wen",
+      "First Author": "Bo Hu",
+      "CN/EN": "English"
+    },
+    {
+      "Year": "2024",
+      "Journal": "arXiv preprint arXiv:2411.12280",
+      "Title": "Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design",
+      "Author": "Siyu Liu, Tongqi Wen, Beilin Ye, Zhuoyuan Li, David J. Srolovitz",
+      "First Author": "Siyu Liu",
+      "CN/EN": "English"
+    }
+  ]
+  
