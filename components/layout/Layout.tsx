@@ -21,7 +21,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex justify-between items-center h-16">
             {/* Logo/Name */}
             <Link
-              href="https://tongqwen.netlify.app/"
+              href="https://tongqiwen.netlify.app/"
               className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0ea5e9] to-[#3b82f6] transform perspective-500 rotate-x-6"
             >
               Personal Website
