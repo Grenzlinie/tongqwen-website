@@ -12,7 +12,7 @@ const Introduction = () => {
             My research combines machine learning with atomistic simulations to explore fascinating materials, including high-entropy alloys, glass, and defect properties. I&apos;m driven by the belief that technology and innovation can create breakthroughs that shape a brighter future, and I&apos;m always excited to push the boundaries of what we know. Let&apos;s explore, discover, and innovate together!
         </p>
         <p className="text-slate-600 mt-4">
-            Before joining HKU, I had the honor of conducting research at renowned institutions like Ames National Laboratory, Iowa State University (USA), and City University of Hong Kong. Along the way, I was humbled to receive the Ross Coffin Purdy Award from the American Ceramic Society in 2021.
+            Before joining HKU, I had the honor of conducting research at renowned institutions like Ames National Laboratory, Iowa State University (USA), and City University of Hong Kong. Along the way, I was humbled to receive the <a href="https://ceramics.org/award/ross-coffin-purdy-award/" className="text-sky-500 hover:text-sky-600 transition-colors">Ross Coffin Purdy Award</a> from the American Ceramic Society in 2021.
         </p>
         </div>
     </div>

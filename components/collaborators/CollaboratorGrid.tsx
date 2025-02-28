@@ -11,7 +11,7 @@ const CollaboratorGrid = () => {
       title: "Group member",
       institution: "The University of Hong Kong",
       image: "/david-srolovitz.png",
-      website: "https://scholar.google.com/citations?hl=zh-CN&user=nC95Zy0AAAAJ&view_op=list_works&sortby=pubdate",
+      website: "https://scholar.google.com/citations?user=nC95Zy0AAAAJ&hl=en",
       research: "Materials theory, Simulations of defects, Microstructure, Deformation, and Film growth"
     },
     {
@@ -19,7 +19,7 @@ const CollaboratorGrid = () => {
       title: "Researcher",
       institution: "DP Technology; AI for Science Institute",
       image: "/linfengzhang.png",
-      website: "https://scholar.google.com/citations?user=jk7qwmcAAAAJ&hl=zh-CN",
+      website: "https://scholar.google.com/citations?user=jk7qwmcAAAAJ&hl=en",
       research: "AI for Science, Multi-scale modeling, Molecular simulation, Materials design"
     },
     {
@@ -43,7 +43,7 @@ const CollaboratorGrid = () => {
       title: "Group member",
       institution: "The University of Hong Kong",
       image: "/yuewenyang.png",
-      website: "https://scholar.google.com/citations?user=DfBqZBkAAAAJ&hl=zh-TW",
+      website: "https://scholar.google.com/citations?user=DfBqZBkAAAAJ&hl=en",
       research: "AI for catalyst materials, Density functional theory"
     },
     {
@@ -59,7 +59,7 @@ const CollaboratorGrid = () => {
       title: "Researcher",
       institution: "Columbia University",
       image: "/sunyang.png",
-      website: "https://scholar.google.com/citations?user=91yBLrMAAAAJ&hl=zh-CN",
+      website: "https://scholar.google.com/citations?user=91yBLrMAAAAJ&hl=en",
       research: ""
     },
     {
@@ -67,7 +67,7 @@ const CollaboratorGrid = () => {
       title: "Researcher",
       institution: "Peking University",
       image: "/default.png",
-      website: "https://scholar.google.com/citations?user=i2mOt14AAAAJ&hl=zh-CN",
+      website: "https://scholar.google.com/citations?user=i2mOt14AAAAJ&hl=en",
       research: "Applied mathematics"
     },
     {
@@ -75,9 +75,33 @@ const CollaboratorGrid = () => {
       title: "Researcher",
       institution: "Institute of Applied Physics and Computational Mathematics",
       image: "/han-wang.png",
-      website: "https://scholar.google.com/citations?user=BZsn3tcAAAAJ&hl=zh-CN",
+      website: "https://scholar.google.com/citations?user=BZsn3tcAAAAJ&hl=en",
       research: "Molecular dynamics, Machine learning, Rare events, Multiscale simulation"
-    }
+    },
+    {
+      name: "Cai-Zhuang Wang",
+      title: "Researcher",
+      institution: "Ames National Laboratory",
+      image: "/default.png",
+      website: "https://scholar.google.com/citations?user=9r-VpcgAAAAJ&hl=en",
+      research: "Condensed Matter Physics"
+    },
+    {
+      name: "Kai-Ming Ho",
+      title: "Researcher",
+      institution: "Iowa State University",
+      image: "/default.png",
+      website: "https://scholar.google.com/citations?user=cGlRoOAAAAAJ&hl=en",
+      research: "Condensed Matter"
+    },
+    {
+      name: "Yanhui Liu",
+      title: "Researcher",
+      institution: "Institute of Physics, CAS",
+      image: "/yanhui-liu.png",
+      website: "https://scholar.google.com/citations?user=KKWzFUwAAAAJ&hl=en",
+      research: "Combinatorial alloy development, Metallic glasses"
+    },
     // Add more collaborators here
   ];
 
