@@ -17,7 +17,7 @@ const SelectedPapers = () => {
   const papers = [
     {
       title: "Inverse Materials Design by Large Language Model-Assisted Generative Framework",
-      authors: "Yun Hao, Che Fan, Beilin Ye, Wenhao Lu, Zhen Lu, Peilin Zhao, Zhifeng Gao, Qingyao Wu, Yanhui Liu, Tongqi Wen",
+      authors: "Yun Hao, Che Fan, Beilin Ye, Wenhao Lu, Zhen Lu, Peilin Zhao, Zhifeng Gao*, Qingyao Wu*, Yanhui Liu*, Tongqi Wen*",
       conference: "arXiv",
       link: "https://arxiv.org/abs/2502.18127",
       area: ["AI4S", "Materials Inverse Design"],
@@ -28,7 +28,7 @@ const SelectedPapers = () => {
     },
     {
       title: "Active Learning for Conditional Inverse Design with Crystal Generation and Foundation Atomic Models",
-      authors: "Zhuoyuan Li, Siyu Liu, Beilin Ye, David J. Srolovitz, Tongqi Wen",
+      authors: "Zhuoyuan Li, Siyu Liu, Beilin Ye, David J. Srolovitz*, Tongqi Wen*",
       conference: "arXiv",
       link: "https://arxiv.org/abs/2502.16984",
       area: ["AI4S", "Materials Inverse Design", "Atomic Models"],
@@ -39,7 +39,7 @@ const SelectedPapers = () => {
     },
     {
       title: "A Multi-agent Framework for Materials Laws Discovery",
-      authors: "Bo Hu, Siyu Liu, Beilin Ye, Yun Hao, Tongqi Wen",
+      authors: "Bo Hu, Siyu Liu, Beilin Ye, Yun Hao, Tongqi Wen*",
       conference: "arXiv",
       link: "https://arxiv.org/abs/2411.16416",
       area: ["AI4S", "Materials Laws"],
@@ -50,7 +50,7 @@ const SelectedPapers = () => {
     },
     {
       title: "Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design",
-      authors: "Siyu Liu, Tongqi Wen, Beilin Ye, Zhuoyuan Li, David J. Srolovitz",
+      authors: "Siyu Liu, Tongqi Wen*, Beilin Ye, Zhuoyuan Li, David J. Srolovitz*",
       conference: "arXiv",
       link: "https://arxiv.org/pdf/2411.12280",
       area: ["AI4S", "Materials Properties"],
