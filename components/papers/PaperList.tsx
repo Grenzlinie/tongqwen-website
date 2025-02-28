@@ -9,13 +9,10 @@ const PaperList = () => {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
 
   useEffect(() => {
-    // Fetch the papers data from the JSON file
     const fetchPapersFromJson = async () => {
       try {
-        const response = await fetch('/papers_info.json'); // Adjust the path if needed
+        const response = await fetch('/papers_info.json');
         const data = await response.json();
-
-        // Process the data to organize papers by year
         const processedPapers = processPapersData(data);
         setPapers(processedPapers);
       } catch (error) {
@@ -26,12 +23,21 @@ const PaperList = () => {
     fetchPapersFromJson();
   }, []);
 
+  const addCorrespondingMarkers = (author: string, correspondingAuthors: string[] | undefined) => {
+    if (!correspondingAuthors || !Array.isArray(correspondingAuthors)) return author;
+    
+    const authors = author.split(', ');
+    return authors.map(auth => {
+      const trimmedAuthor = auth.trim();
+      return correspondingAuthors.includes(trimmedAuthor) ? `${trimmedAuthor}*` : trimmedAuthor;
+    }).join(', ');
+  };
+
   const processPapersData = (data: any[]) => {
-    // Organize papers by year
     const papersByYear: any[] = [];
 
     data.forEach((paper: any) => {
-      const { Year, Title, Author, Journal, FirstAuthor } = paper;
+      const { Year, Title, Author, Journal } = paper;
       if (!Year || !Title || !Author) return;
 
       let yearGroup = papersByYear.find((group) => group.year === Year);
@@ -40,18 +46,18 @@ const PaperList = () => {
         papersByYear.push(yearGroup);
       }
 
+      // 使用可选链操作符来安全访问 Corresponding Author
+      const correspondingAuthors = paper['Corresponding Author'];
+      const authorsWithMarkers = addCorrespondingMarkers(Author, correspondingAuthors);
+
       yearGroup.papers.push({
         title: Title,
-        authors: Author,
+        authors: authorsWithMarkers,
         venue: Journal,
-        firstAuthor: FirstAuthor,
       });
     });
 
-    // Sort the years in descending order
     papersByYear.sort((a, b) => b.year - a.year);
-
-    // Sort papers within each year group in reverse order (from last to first)
     papersByYear.forEach(yearGroup => {
       yearGroup.papers.reverse();
     });
@@ -59,11 +65,25 @@ const PaperList = () => {
     return papersByYear;
   };
 
+  const renderAuthors = (authorsString: string) => {
+    return authorsString.split(', ').map((author, idx, arr) => (
+      <React.Fragment key={idx}>
+        {author.includes('*') ? (
+          <>
+            {author.replace('*', '')}<sup className="text-red-500">*</sup>
+          </>
+        ) : (
+          author
+        )}
+        {idx < arr.length - 1 && ', '}
+      </React.Fragment>
+    ));
+  };
+
   const years = papers.map((group) => group.year);
 
   return (
     <div className="space-y-8">
-      {/* Year filter */}
       <div className="flex flex-wrap gap-2">
         <button
           onClick={() => setSelectedYear(null)}
@@ -84,7 +104,6 @@ const PaperList = () => {
         ))}
       </div>
 
-      {/* Papers list */}
       <div className="space-y-12">
         {papers
           .filter((group) => !selectedYear || group.year === selectedYear)
@@ -103,7 +122,9 @@ const PaperList = () => {
                         <h3 className="text-lg font-medium text-slate-900">
                           {paper.title}
                         </h3>
-                        <p className="text-slate-600 mt-1">{paper.authors}</p>
+                        <p className="text-slate-600 mt-1">
+                          {renderAuthors(paper.authors)}
+                        </p>
                         <p className="text-sm text-slate-500 mt-2">{paper.venue}</p>
                       </div>
                     </div>
