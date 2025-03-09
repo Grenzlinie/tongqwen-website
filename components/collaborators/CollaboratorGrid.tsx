@@ -102,6 +102,30 @@ const CollaboratorGrid = () => {
       website: "https://scholar.google.com/citations?user=KKWzFUwAAAAJ&hl=en",
       research: "Combinatorial alloy development, Metallic glasses"
     },
+    {
+      name: "Jian Han",
+      title: "Researcher",
+      institution: "City University of Hong Kong",
+      image: "/default.png",
+      website: "https://scholar.google.com/citations?user=7qgSoLYAAAAJ&hl=en",
+      research: "Materials Science and Engineering"
+    },
+    {
+      name: "Zhaoxuan Wu",
+      title: "Researcher",
+      institution: "City University of Hong Kong",
+      image: "/default.png",
+      website: "https://scholar.google.com/citations?user=NwUDGc4AAAAJ&hl=en",
+      research: "Multiscale Modeling and Simulation, Plasticity Theory, HCP Metals, Alloy Design"
+    },
+    {
+      name: "Mohan Chen",
+      title: "Researcher",
+      institution: "Peking University",
+      image: "/mohan-chen.png",
+      website: "https://scholar.google.com/citations?user=enNUSlcAAAAJ&hl=en",
+      research: "Density Functional Theory, Molecular Dynamics"
+    },
     // Add more collaborators here
   ];
 
