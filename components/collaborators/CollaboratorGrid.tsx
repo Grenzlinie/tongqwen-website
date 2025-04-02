@@ -3,12 +3,13 @@
 import React from 'react';
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
+import { title } from 'process';
 
 const CollaboratorGrid = () => {
   const collaborators = [
     {
       name: "David Srolovitz",
-      title: "Group member",
+      title: "Researcher",
       institution: "The University of Hong Kong",
       image: "/david-srolovitz.png",
       website: "https://scholar.google.com/citations?user=nC95Zy0AAAAJ&hl=en",
@@ -32,7 +33,7 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Beilin Ye",
-      title: "Group member",
+      title: "Researcher",
       institution: "The University of Hong Kong",
       image: "/beilinye.png",
       website: "https://scholar.google.com/citations?user=_rt5FgUAAAAJ&hl=en",
@@ -40,7 +41,7 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Yuewen Yang",
-      title: "Group member",
+      title: "Researcher",
       institution: "The University of Hong Kong",
       image: "/yuewenyang.png",
       website: "https://scholar.google.com/citations?user=DfBqZBkAAAAJ&hl=en",
@@ -126,6 +127,30 @@ const CollaboratorGrid = () => {
       website: "https://scholar.google.com/citations?user=enNUSlcAAAAJ&hl=en",
       research: "Density Functional Theory, Molecular Dynamics"
     },
+    {
+      name: "Jianqiu Liu",
+      title: "Researcher",
+      institution: "The University of Hong Kong",
+      image: "/jianqiu_liu.jpeg",
+      website: "https://scholar.google.com/citations?user=YNh6ecMAAAAJ&hl=zh-CN&oi=ao",
+      research: "CPFEM and MD simulations of void evolution in metallic materials"
+    },
+    {
+      name: "A. S. L. Subrahmanyam Pattamatta",
+      title: "Researcher",
+      institution: "The University of Hong Kong",
+      image: "/subrahmanyam_pattamatta.jpeg",
+      website: "https://mech.hku.hk/academic-staff/pattamatta-subrahmanyam---",
+      research: "Computational mechanics, materials science and high performance computing"
+    },
+    {
+      name: "Xiaoguo Gong",
+      title: "Researcher",
+      institution: "The University of Hong Kong",
+      image: "/xiaoguo_gong.jpeg",
+      website: "https://scholar.google.com/citations?user=QWOZgRoAAAAJ&hl=zh-CN&oi=ao",
+      research: "Machine learning potentials and grain boundary simulations in fcc metals"
+    }
     // Add more collaborators here
   ];
 
