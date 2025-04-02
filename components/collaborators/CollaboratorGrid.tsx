@@ -45,7 +45,7 @@ const CollaboratorGrid = () => {
       institution: "The University of Hong Kong",
       image: "/yuewenyang.png",
       website: "https://scholar.google.com/citations?user=DfBqZBkAAAAJ&hl=en",
-      research: "AI for catalyst materials, Density functional theory"
+      research: "MDFT, TD-DFT and MD for energy conversion"
     },
     {
       name: "Siyu Liu",
