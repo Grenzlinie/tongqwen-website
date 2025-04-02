@@ -3,13 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
-import { title } from 'process';
 
 const CollaboratorGrid = () => {
   const collaborators = [
     {
       name: "David Srolovitz",
-      title: "Researcher",
       institution: "The University of Hong Kong",
       image: "/david-srolovitz.png",
       website: "https://scholar.google.com/citations?user=nC95Zy0AAAAJ&hl=en",
@@ -17,7 +15,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Linfeng Zhang",
-      title: "Researcher",
       institution: "DP Technology; AI for Science Institute",
       image: "/linfengzhang.png",
       website: "https://scholar.google.com/citations?user=jk7qwmcAAAAJ&hl=en",
@@ -25,7 +22,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Zhuoyuan Li",
-      title: "Group member",
       institution: "The University of Hong Kong",
       image: "/zhuoyuanli.png",
       website: "https://github.com/ZLI-afk",
@@ -33,7 +29,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Beilin Ye",
-      title: "Researcher",
       institution: "The University of Hong Kong",
       image: "/beilinye.png",
       website: "https://scholar.google.com/citations?user=_rt5FgUAAAAJ&hl=en",
@@ -49,7 +44,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Siyu Liu",
-      title: "Group member",
       institution: "The University of Hong Kong",
       image: "/siyuliu.png",
       website: "https://grenzlinie.github.io/",
@@ -57,7 +51,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Yang Sun",
-      title: "Researcher",
       institution: "Columbia University",
       image: "/sunyang.png",
       website: "https://scholar.google.com/citations?user=91yBLrMAAAAJ&hl=en",
@@ -65,7 +58,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Weinan E",
-      title: "Researcher",
       institution: "Peking University",
       image: "/default.png",
       website: "https://scholar.google.com/citations?user=i2mOt14AAAAJ&hl=en",
@@ -73,7 +65,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Han Wang",
-      title: "Researcher",
       institution: "Institute of Applied Physics and Computational Mathematics",
       image: "/han-wang.png",
       website: "https://scholar.google.com/citations?user=BZsn3tcAAAAJ&hl=en",
@@ -81,7 +72,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Cai-Zhuang Wang",
-      title: "Researcher",
       institution: "Ames National Laboratory",
       image: "/default.png",
       website: "https://scholar.google.com/citations?user=9r-VpcgAAAAJ&hl=en",
@@ -89,7 +79,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Kai-Ming Ho",
-      title: "Researcher",
       institution: "Iowa State University",
       image: "/default.png",
       website: "https://scholar.google.com/citations?user=cGlRoOAAAAAJ&hl=en",
@@ -97,7 +86,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Yanhui Liu",
-      title: "Researcher",
       institution: "Institute of Physics, CAS",
       image: "/yanhui-liu.png",
       website: "https://scholar.google.com/citations?user=KKWzFUwAAAAJ&hl=en",
@@ -105,7 +93,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Jian Han",
-      title: "Researcher",
       institution: "City University of Hong Kong",
       image: "/default.png",
       website: "https://scholar.google.com/citations?user=7qgSoLYAAAAJ&hl=en",
@@ -113,7 +100,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Zhaoxuan Wu",
-      title: "Researcher",
       institution: "City University of Hong Kong",
       image: "/default.png",
       website: "https://scholar.google.com/citations?user=NwUDGc4AAAAJ&hl=en",
@@ -121,7 +107,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Mohan Chen",
-      title: "Researcher",
       institution: "Peking University",
       image: "/mohan-chen.png",
       website: "https://scholar.google.com/citations?user=enNUSlcAAAAJ&hl=en",
@@ -129,7 +114,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Jianqiu Liu",
-      title: "Researcher",
       institution: "The University of Hong Kong",
       image: "/jianqiu_liu.jpeg",
       website: "https://scholar.google.com/citations?user=YNh6ecMAAAAJ&hl=zh-CN&oi=ao",
@@ -137,7 +121,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "A. S. L. Subrahmanyam Pattamatta",
-      title: "Researcher",
       institution: "The University of Hong Kong",
       image: "/subrahmanyam_pattamatta.jpeg",
       website: "https://mech.hku.hk/academic-staff/pattamatta-subrahmanyam---",
@@ -145,7 +128,6 @@ const CollaboratorGrid = () => {
     },
     {
       name: "Xiaoguo Gong",
-      title: "Researcher",
       institution: "The University of Hong Kong",
       image: "/xiaoguo_gong.jpeg",
       website: "https://scholar.google.com/citations?user=QWOZgRoAAAAJ&hl=zh-CN&oi=ao",
