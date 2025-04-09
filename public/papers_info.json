@@ -76,6 +76,15 @@
       "Corresponding Author": ["Tongqi Wen", "David J. Srolovitz"],
       "First Author": "Siyu Liu",
       "CN/EN": "English"
+    },
+    {
+      "Year": "2025",
+      "Journal": "npj Computational Materials",
+      "Title": "APEX: an automated cloud-native material property explorer",
+      "Author": "Zhuoyuan Li, Tongqi Wen, Yuzhi Zhang, Xinzijian Liu, Chengqian Zhang, A. S. L. Subrahmanyam Pattamatta, Xiaoguo Gong, Beilin Ye, Han Wang, Linfeng Zhang, David J. Srolovitz",
+      "Corresponding Author": ["Tongqi Wen", "Yuzhi Zhang", "David J. Srolovitz"],
+      "First Author": "Zhuoyuan Li",
+      "CN/EN": "English"
     }
   ]
   
