@@ -15,7 +15,7 @@ const JoinUs = () => {
           href="mailto:tongqwen@hku.hk" 
           className="text-sky-500 hover:text-sky-600 transition-colors"
         >
-          Contact us
+          Contact us: tongqwen@hku.hk
         </a>
       </div>
     </div>
