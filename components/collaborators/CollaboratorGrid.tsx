@@ -35,14 +35,6 @@ const CollaboratorGrid = () => {
       research: "AI for ceramic materials, high entropy alloys"
     },
     {
-      name: "Yuewen Yang",
-      title: "Researcher",
-      institution: "The University of Hong Kong",
-      image: "/yuewenyang.png",
-      website: "https://scholar.google.com/citations?user=DfBqZBkAAAAJ&hl=en",
-      research: "MDFT, TD-DFT and MD for energy conversion"
-    },
-    {
       name: "Siyu Liu",
       institution: "The University of Hong Kong",
       image: "/siyuliu.png",
@@ -120,6 +112,13 @@ const CollaboratorGrid = () => {
       research: "CPFEM and MD simulations of void evolution in metallic materials"
     },
     {
+      name: "Bo Hu",
+      institution: "The University of Hong Kong",
+      image: "/hubo.png",
+      website: "https://scholar.google.com/citations?user=ES_BMfsAAAAJ&hl=en",
+      research: "LLM for materials, AI for grain boundaries"
+    },
+    {
       name: "A. S. L. Subrahmanyam Pattamatta",
       institution: "The University of Hong Kong",
       image: "/subrahmanyam_pattamatta.jpeg",
@@ -132,6 +131,14 @@ const CollaboratorGrid = () => {
       image: "/xiaoguo_gong.jpeg",
       website: "https://scholar.google.com/citations?user=QWOZgRoAAAAJ&hl=zh-CN&oi=ao",
       research: "Machine learning potentials and grain boundary simulations in fcc metals"
+    },
+    {
+      name: "Yuewen Yang",
+      title: "Researcher",
+      institution: "The University of Hong Kong",
+      image: "/yuewenyang.jpeg",
+      website: "https://scholar.google.com/citations?user=DfBqZBkAAAAJ&hl=en",
+      research: "MDFT, TD-DFT and MD for energy conversion"
     }
     // Add more collaborators here
   ];

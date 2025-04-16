@@ -2,13 +2,14 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Home, FileText, Users, Menu, X } from 'lucide-react';
+import { Home, FileText, Rss, Users, Menu, X } from 'lucide-react';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const navItems = [
     { href: '/', label: 'Home', icon: Home },
+    { href: '/news', label: 'News', icon: Rss },
     { href: '/papers', label: 'Papers', icon: FileText },
     { href: '/collaborators', label: 'Collaborators', icon: Users },
   ];

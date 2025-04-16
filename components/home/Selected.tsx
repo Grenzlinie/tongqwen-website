@@ -1,6 +1,7 @@
 import React from 'react';
-import { FileText } from 'lucide-react';
+import { FileText, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SelectedPapers = () => {
   // 定义领域到颜色的映射
@@ -64,7 +65,18 @@ const SelectedPapers = () => {
 
   return (
     <div className="py-8">
+      <div className="flex items-center justify-between mb-4">
       <h2 className="text-2xl font-bold text-slate-900 mb-6">Selected Papers</h2>
+        <Link 
+          href="/papers" 
+          className="flex items-center text-sky-500 hover:text-sky-600 transition-colors text-sm"
+        >
+          View all papers
+          <ArrowRight className="w-4 h-4 ml-1" />
+        </Link>
+      </div>
+      
+      
       <div className="space-y-6">
         {papers.map((paper, index) => (
           <div
