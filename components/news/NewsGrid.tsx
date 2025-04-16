@@ -11,6 +11,7 @@ const NewsGrid = () => {
   const [years, setYears] = useState<string[]>([]);
   const [tags, setTags] = useState<string[]>([]);
 
+  // 在 components/news/NewsGrid.tsx 文件中
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -47,7 +48,7 @@ const NewsGrid = () => {
     };
 
     fetchNews();
-  }, []); // 移除 selectedYear 依赖，避免循环重新加载
+  }, [selectedYear]); // 添加 selectedYear 作为依赖项
 
   // 根据年份和标签过滤新闻
   const filteredNews = newsList.filter(news => {

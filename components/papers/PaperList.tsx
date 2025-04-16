@@ -7,32 +7,6 @@ import { FileText } from 'lucide-react';
 const PaperList = () => {
   const [papers, setPapers] = useState<any[]>([]);
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
-
-  useEffect(() => {
-    const fetchPapersFromJson = async () => {
-      try {
-        const response = await fetch('/papers_info.json');
-        const data = await response.json();
-        const processedPapers = processPapersData(data);
-        setPapers(processedPapers);
-      } catch (error) {
-        console.error('Failed to load papers from JSON:', error);
-      }
-    };
-
-    fetchPapersFromJson();
-  }, []);
-
-  const addCorrespondingMarkers = (author: string, correspondingAuthors: string[] | undefined) => {
-    if (!correspondingAuthors || !Array.isArray(correspondingAuthors)) return author;
-    
-    const authors = author.split(', ');
-    return authors.map(auth => {
-      const trimmedAuthor = auth.trim();
-      return correspondingAuthors.includes(trimmedAuthor) ? `${trimmedAuthor}*` : trimmedAuthor;
-    }).join(', ');
-  };
-
   const processPapersData = (data: any[]) => {
     const papersByYear: any[] = [];
 
@@ -63,6 +37,31 @@ const PaperList = () => {
     });
 
     return papersByYear;
+  };
+  
+  useEffect(() => {
+    const fetchPapersFromJson = async () => {
+      try {
+        const response = await fetch('/papers_info.json');
+        const data = await response.json();
+        const processedPapers = processPapersData(data);
+        setPapers(processedPapers);
+      } catch (error) {
+        console.error('Failed to load papers from JSON:', error);
+      }
+    };
+  
+    fetchPapersFromJson();
+  }, [processPapersData]);
+
+  const addCorrespondingMarkers = (author: string, correspondingAuthors: string[] | undefined) => {
+    if (!correspondingAuthors || !Array.isArray(correspondingAuthors)) return author;
+    
+    const authors = author.split(', ');
+    return authors.map(auth => {
+      const trimmedAuthor = auth.trim();
+      return correspondingAuthors.includes(trimmedAuthor) ? `${trimmedAuthor}*` : trimmedAuthor;
+    }).join(', ');
   };
 
   const renderAuthors = (authorsString: string) => {

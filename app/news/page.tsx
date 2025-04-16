@@ -30,7 +30,7 @@ export default function NewsPage() {
       <div>
         <h1 className="text-3xl font-bold text-slate-900">News Updates</h1>
         <p className="mt-2 text-slate-600">
-          This section showcases our team's latest research achievements, academic activities, and other important updates.
+          This section showcases our teams&apos latest research achievements, academic activities, and other important updates.
         </p>
       </div>
       
