@@ -17,7 +17,6 @@ const tagColors: { [key: string]: string } = {
   'Visit': 'bg-cyan-50 text-cyan-700 ring-cyan-600/20',
   'Award': 'bg-amber-50 text-amber-700 ring-amber-600/20',
   'Workshop': 'bg-violet-50 text-violet-700 ring-violet-600/20',
-  'Team': 'bg-orange-50 text-orange-700 ring-orange-600/20',
   'Education': 'bg-pink-50 text-pink-700 ring-pink-600/20',
   'Industry': 'bg-emerald-50 text-emerald-700 ring-emerald-600/20',
 };
