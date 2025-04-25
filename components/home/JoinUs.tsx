@@ -12,11 +12,12 @@ const JoinUs = () => {
       </p>
       <div className="mt-4">
         <a 
-          href="mailto:tongqwen@hku.hk" 
+          href="mailto:tongqwen&#64;hku&#46;hk" 
           className="text-sky-500 hover:text-sky-600 transition-colors"
         >
-          Contact us: tongqwen@hku.hk
+          Contact us
         </a>
+        <a>: tongqwen at hku dot hk</a>
       </div>
     </div>
   </div>

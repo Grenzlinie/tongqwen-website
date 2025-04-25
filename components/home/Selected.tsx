@@ -121,7 +121,7 @@ const SelectedPapers = () => {
                     <span className="text-[#667eea]">{paper.question}</span>
                   </p>
                 )}
-                <p className="text-slate-600 mt-2 text-sm">{paper.abstract}</p>
+                {/* <p className="text-slate-600 mt-2 text-sm">{paper.abstract}</p> */}
                 {paper.image && (
                   <Image
                     src={paper.image}

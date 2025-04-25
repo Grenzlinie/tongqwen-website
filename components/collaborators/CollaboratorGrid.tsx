@@ -139,7 +139,15 @@ const CollaboratorGrid = () => {
       image: "/yuewenyang.jpeg",
       website: "https://scholar.google.com/citations?user=DfBqZBkAAAAJ&hl=en",
       research: "MDFT, TD-DFT and MD for energy conversion"
-    }
+    },
+    {
+      name: "Caihao Qiu",
+      title: "Researcher",
+      institution: "City University of Hong Kong",
+      image: "/caihaoqiu.png",
+      website: "https://scholar.google.com/citations?user=B7N1cSMAAAAJ&hl=en",
+      research: "Grain boundary kinetics and microstructure evolution of polycrystals; front-tracking modelling, phase field simulation, molecular dynamics simulation"
+    },
     // Add more collaborators here
   ];
 
