@@ -11,11 +11,23 @@ const SelectedPapers = () => {
     'Materials Properties': 'bg-green-50 text-green-800 ring-green-600/20',
     "Atomic Models": "bg-purple-50 text-purple-700 ring-purple-700/10",
     "Materials Inverse Design": "bg-indigo-50 text-indigo-700 ring-indigo-700/10",
+    "Materials Tools": "bg-pink-50 text-pink-700 ring-pink-700/10",
     'Other Area': 'bg-blue-50 text-blue-700 ring-blue-700/10',
     // 添加更多领域和对应的颜色类
   };
 
   const papers = [
+    {
+      title: "MatTools: Benchmarking Large Language Models for Materials Science Tools",
+      authors: "Siyu Liu, Jiamin Xu, Beilin Ye, Bo Hu, David J. Srolovitz*, Tongqi Wen*",
+      conference: "arXiv",
+      link: "https://arxiv.org/abs/2505.10852",
+      area: ["AI4S", "Materials Tools"],
+      date: "May 16, 2025",
+      abstract: "Deep generative models hold great promise for inverse materials design, yet their efficiency and accuracy remain constrained by data scarcity and model architecture. Here, we introduce AlloyGAN, a closed-loop framework that integrates Large Language Model (LLM)-assisted text mining with Conditional Generative Adversarial Networks (CGANs) to enhance data diversity and improve inverse design. Taking alloy discovery as a case study, AlloyGAN systematically refines material candidates through iterative screening and experimental validation. For metallic glasses, the framework predicts thermodynamic properties with discrepancies of less than 8% from experiments, demonstrating its robustness. By bridging generative AI with domain knowledge and validation workflows, AlloyGAN offers a scalable approach to accelerate the discovery of materials with tailored properties, paving the way for broader applications in materials science.",
+      question: "🛠️ How can we evaluate and improve LLMs' capabilities in materials science tools?",
+      image: "/mattools.jpg", // 替换为实际的图片路径
+    },
     {
       title: "Inverse Materials Design by Large Language Model-Assisted Generative Framework",
       authors: "Yun Hao, Che Fan, Beilin Ye, Wenhao Lu, Zhen Lu, Peilin Zhao, Zhifeng Gao*, Qingyao Wu*, Yanhui Liu*, Tongqi Wen*",

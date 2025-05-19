@@ -85,6 +85,15 @@
       "Corresponding Author": ["Tongqi Wen", "Yuzhi Zhang", "David J. Srolovitz"],
       "First Author": "Zhuoyuan Li",
       "CN/EN": "English"
+    },
+    {
+      "Year": "2025",
+      "Journal": "arXiv preprint arXiv:2505.10852",
+      "Title": "MatTools: Benchmarking Large Language Models for Materials Science Tools",
+      "Author": "Siyu Liu, Jiamin Xu, Beilin Ye, Bo Hu, David J. Srolovitz, Tongqi Wen",
+      "Corresponding Author": ["Tongqi Wen", "David J. Srolovitz"],
+      "First Author": "Siyu Liu",
+      "CN/EN": "English"
     }
   ]
   
