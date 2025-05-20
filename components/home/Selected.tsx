@@ -64,10 +64,10 @@ const SelectedPapers = () => {
     {
       title: "Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design",
       authors: "Siyu Liu, Tongqi Wen*, Beilin Ye, Zhuoyuan Li, David J. Srolovitz*",
-      conference: "arXiv",
-      link: "https://arxiv.org/pdf/2411.12280",
+      conference: "Digital Discovery",
+      link: "https://pubs.rsc.org/en/content/articlelanding/2025/dd/d5dd00061k",
       area: ["AI4S", "Materials Properties"],
-      date: "November 19, 2024",
+      date: "May 20, 2025",
       abstract: "Efficient and accurate prediction of material properties is critical for advancing materials design and applications. The rapid-evolution of large language models (LLMs) presents a new opportunity for material property predictions, complementing experimental measurements and multi-scale computational methods. We focus on predicting the elastic constant tensor, as a case study, and develop domain-specific LLMs for predicting elastic constants and for materials discovery. The proposed ElaTBot LLM enables simultaneous prediction of elastic constant tensors, bulk modulus at finite temperatures, and the generation of new materials with targeted properties. Moreover, the capabilities of ElaTBot are further enhanced by integrating with general LLMs (GPT-4o) and Retrieval-Augmented Generation (RAG) for prediction. A specialized variant, ElaTBot-DFT, designed for 0 K elastic constant tensor prediction, reduces the prediction errors by 33.1% compared with domain-specific, material science LLMs (Darwin) trained on the same dataset. This natural language-based approach lowers the barriers to computational materials science and highlights the broader potential of LLMs for material property predictions and inverse design.",
       question: "🧀 Can the materials knowledge stored in LLMs help us predict material properties?",
       image: "/siyu1.png", // 替换为实际的图片路径
