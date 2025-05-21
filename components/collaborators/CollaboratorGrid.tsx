@@ -148,6 +148,22 @@ const CollaboratorGrid = () => {
       website: "https://scholar.google.com/citations?user=B7N1cSMAAAAJ&hl=en",
       research: "Grain boundary kinetics and microstructure evolution of polycrystals; front-tracking modelling, phase field simulation, molecular dynamics simulation"
     },
+    {
+      name: "Han Liu",
+      title: "Researcher",
+      institution: "City University of Hong Kong",
+      image: "/default.png",
+      website: "https://scholars.cityu.edu.hk/en/persons/han-liu(af9de0bd-deb1-407c-9747-85d623c536d1)/publications.html",
+      research: "Lithium-ion battery materials"
+    },
+    {
+      name: "Yang Ren",
+      title: "Researcher",
+      institution: "City University of Hong Kong",
+      image: "/renyang.jpeg",
+      website: "https://scholar.google.com/citations?user=yAdAxusAAAAJ&hl=en",
+      research: "Condensed Matter Physics, Materials Physics, Phase transition, Synchrotron X-ray, Neutron scattering"
+    }
     // Add more collaborators here
   ];
 

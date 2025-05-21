@@ -1,5 +1,10 @@
 [
     {
+      "date": "2025-05-21",
+      "content": "Congratulations to Siyu (Calvin) and the team on the newly published paper in <a href='https://pubs.rsc.org/en/content/articlelanding/2025/dd/d5dd00061k' class='text-sky-500 hover:text-sky-600 transition-colors'>Digital Discovery</a>! This exciting work on using LLMs for numerical property prediction is a perfect complement to our earlier <a href='https://doi.org/10.1016/j.mattod.2024.08.028' class='text-sky-500 hover:text-sky-600 transition-colors'>Materials Today</a> publication on LLMs for materials classification—great progress on both fronts!",
+      "tags": ["Publication"]
+    },
+    {
       "date": "2025-04-15",
       "content": "I’m thrilled to share the fantastic news that <strong>Bo Hu</strong> has been awarded the prestigious <strong>Hong Kong PhD Fellowship Scheme (HKPFS)</strong> — the highest honor for incoming PhD students in Hong Kong! This is a remarkable achievement and a great start to his academic journey. Let’s all congratulate him on this well-deserved recognition!",
       "tags": ["Award", "Recruitment"]
